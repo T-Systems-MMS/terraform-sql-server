@@ -100,16 +100,9 @@ resource "azurerm_mssql_database" "mssql_database" {
     }
   }
 
-  dynamic "short_term_retention_policy" {
-    for_each = compact([
-      local.mssql_database[each.key].short_term_retention_policy.retention_days,
-      local.mssql_database[each.key].short_term_retention_policy.backup_interval_in_hours
-    ])
-
-    content {
-      retention_days           = local.mssql_database[each.key].short_term_retention_policy.retention_days
-      backup_interval_in_hours = local.mssql_database[each.key].short_term_retention_policy.backup_interval_in_hours
-    }
+  short_term_retention_policy {
+    retention_days           = local.mssql_database[each.key].short_term_retention_policy.retention_days
+    backup_interval_in_hours = local.mssql_database[each.key].short_term_retention_policy.backup_interval_in_hours
   }
 
   tags = local.mssql_server[each.key].tags
