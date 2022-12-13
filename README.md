@@ -1,5 +1,4 @@
 <!-- BEGIN_TF_DOCS -->
-
 # mssql
 
 This module manages Azure MS SQL.
@@ -8,41 +7,41 @@ This module manages Azure MS SQL.
 
 ## Requirements
 
-| Name      | Version |
-| --------- | ------- |
-| terraform | ~>1.0   |
-| azurerm   | ~>3.0   |
+| Name | Version |
+|------|---------|
+| terraform | ~>1.0 |
+| azurerm | ~>3.0 |
 
 ## Providers
 
-| Name    | Version |
-| ------- | ------- |
-| azurerm | ~>3.0   |
+| Name | Version |
+|------|---------|
+| azurerm | ~>3.0 |
 
 ## Resources
 
-| Name                                                          | Type     |
-| ------------------------------------------------------------- | -------- |
-| azurerm_mssql_database.mssql_database                         | resource |
-| azurerm_mssql_firewall_rule.mssql_firewall_rule               | resource |
-| azurerm_mssql_server.mssql_server                             | resource |
+| Name | Type |
+|------|------|
+| azurerm_mssql_database.mssql_database | resource |
+| azurerm_mssql_firewall_rule.mssql_firewall_rule | resource |
+| azurerm_mssql_server.mssql_server | resource |
 | azurerm_mssql_virtual_network_rule.mssql_virtual_network_rule | resource |
 
 ## Inputs
 
-| Name                       | Description                                                                                  | Type  | Default | Required |
-| -------------------------- | -------------------------------------------------------------------------------------------- | ----- | ------- | :------: |
-| mssql_database             | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| mssql_firewall_rule        | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| mssql_server               | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| mssql_virtual_network_rule | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| mssql_database | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| mssql_firewall_rule | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| mssql_server | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| mssql_virtual_network_rule | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 
 ## Outputs
 
-| Name           | Description            |
-| -------------- | ---------------------- |
+| Name | Description |
+|------|-------------|
 | mssql_database | azurerm_mssql_database |
-| mssql_server   | azurerm_mssql_server   |
+| mssql_server | azurerm_mssql_server |
 
 ## Examples
 
@@ -87,5 +86,4 @@ module "mssql" {
   }
 }
 ```
-
 <!-- END_TF_DOCS -->
