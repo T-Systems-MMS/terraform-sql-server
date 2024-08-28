@@ -10,13 +10,13 @@ This module manages Azure MS SQL.
 | Name | Version |
 |------|---------|
 | terraform | ~>1.0 |
-| azurerm | ~>3.0 |
+| azurerm | ~>3.0, <4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | ~>3.0 |
+| azurerm | ~>3.0, <4.0 |
 
 ## Resources
 
